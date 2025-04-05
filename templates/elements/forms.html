@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Showcase</title>
+    <link rel="stylesheet" href="../../static/css/main.css">
+    <link rel="stylesheet" href="../../static/css/forms.css">
+</head>
+<body>
+    <a href="../index.html" class="back-button">← Back to Menu</a>
+    <div class="form-container">
+        <h1 class="form-title">HTML Forms Showcase</h1>
+        
+        <div class="form-section">
+            <h2>Text Inputs</h2>
+            <div class="form-group">
+                <label for="text-input">Text Input</label>
+                <input type="text" id="text-input" placeholder="Enter text here">
+            </div>
+            <div class="form-group">
+                <label for="email-input">Email Input</label>
+                <input type="email" id="email-input" placeholder="Enter email here">
+            </div>
+            <div class="form-group">
+                <label for="password-input">Password Input</label>
+                <input type="password" id="password-input" placeholder="Enter password">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Special Inputs</h2>
+            <div class="form-group">
+                <label for="number-input">Number Input</label>
+                <input type="number" id="number-input" min="0" max="100" step="1">
+            </div>
+            <div class="form-group">
+                <label for="date-input">Date Input</label>
+                <input type="date" id="date-input">
+            </div>
+            <div class="form-group">
+                <label for="color-input">Color Input</label>
+                <input type="color" id="color-input" value="#3498db">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Select and Textarea</h2>
+            <div class="form-group">
+                <label for="select-input">Select Dropdown</label>
+                <select id="select-input">
+                    <option value="">Select an option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="textarea-input">Textarea</label>
+                <textarea id="textarea-input" rows="4" placeholder="Enter your message here"></textarea>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Checkboxes and Radio Buttons</h2>
+            <div class="form-group">
+                <label>Checkboxes</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="checkbox1">
+                        <label for="checkbox1">Option 1</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="checkbox2">
+                        <label for="checkbox2">Option 2</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Radio Buttons</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="radio1" name="radio-group">
+                        <label for="radio1">Option 1</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="radio2" name="radio-group">
+                        <label for="radio2">Option 2</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-button">Submit Form</button>
+    </div>
+</body>
+</html> 

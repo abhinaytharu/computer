@@ -1,0 +1,187 @@
+/* Table Styles */
+.table-container {
+    margin-bottom: 3rem;
+    overflow-x: auto;
+}
+
+.table-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Basic Table Style */
+.basic-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.basic-table th, .basic-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.basic-table th {
+    background: var(--primary-color);
+    color: white;
+}
+
+.basic-table tr:hover {
+    background: #f5f5f5;
+}
+
+/* Striped Table Style */
+.striped-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.striped-table th, .striped-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.striped-table th {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.striped-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.striped-table tr:hover {
+    background: #e9ecef;
+}
+
+/* Modern Table Style */
+.modern-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.modern-table th, .modern-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.modern-table th {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    font-weight: 500;
+}
+
+.modern-table tr:last-child td {
+    border-bottom: none;
+}
+
+.modern-table tr:hover {
+    background: #f8f9fa;
+    transform: scale(1.01);
+    transition: transform 0.2s ease;
+}
+
+/* Responsive Table */
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.responsive-table th, .responsive-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.responsive-table th {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Table with Caption */
+.caption-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.caption-table caption {
+    caption-side: top;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.caption-table th, .caption-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.caption-table th {
+    background: var(--success-color);
+    color: white;
+}
+
+/* Responsive Design for Tables */
+@media screen and (max-width: 600px) {
+    .responsive-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .table-container {
+        margin: 0 -1rem;
+        padding: 0 1rem;
+    }
+
+    .basic-table, .striped-table, .modern-table, .caption-table {
+        font-size: 0.9rem;
+    }
+
+    .basic-table th, .basic-table td,
+    .striped-table th, .striped-table td,
+    .modern-table th, .modern-table td,
+    .caption-table th, .caption-table td {
+        padding: 0.5rem;
+    }
+}
+
+/* Animation for Tables */
+.table-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Effects */
+.basic-table tr, .striped-table tr, .modern-table tr, .caption-table tr {
+    transition: background-color 0.3s ease;
+}
+
+.basic-table tr:hover, .striped-table tr:hover, .modern-table tr:hover, .caption-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+} 
