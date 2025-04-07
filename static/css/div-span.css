@@ -212,4 +212,222 @@
 .p-1 { padding: 1rem; }
 .p-2 { padding: 2rem; }
 .m-1 { margin: 1rem; }
-.m-2 { margin: 2rem; } 
+.m-2 { margin: 2rem; }
+
+/* Block & Inline Elements Showcase Styles */
+.element-section {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.element-section:hover {
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-2px);
+}
+
+.element-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px var(--shadow-color);
+}
+
+/* Block Elements */
+.block-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.block-element {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.block-element:hover {
+    transform: translateX(5px);
+    box-shadow: var(--hover-shadow);
+}
+
+/* Inline Elements */
+.inline-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.inline-element {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.inline-element:hover {
+    background: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: var(--hover-shadow);
+}
+
+/* Mixed Elements */
+.mixed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.mixed-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+.mixed-inline {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    margin: 0.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+/* Layout Examples */
+.layout-example {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.layout-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.layout-item:hover {
+    transform: scale(1.02);
+    box-shadow: var(--hover-shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .element-section {
+        padding: 1.5rem;
+    }
+
+    .element-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .layout-example {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .element-section {
+        padding: 1rem;
+    }
+
+    .element-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .block-element,
+    .mixed-block,
+    .layout-item {
+        padding: 1rem;
+    }
+}
+
+/* Element States */
+.element-active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.element-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Element Utilities */
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.bg-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.bg-secondary {
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* Element Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Element Spacing */
+.spacing-xs { margin: 0.5rem; }
+.spacing-sm { margin: 1rem; }
+.spacing-md { margin: 1.5rem; }
+.spacing-lg { margin: 2rem; }
+
+/* Element Borders */
+.border-thin { border-width: 1px; }
+.border-medium { border-width: 2px; }
+.border-thick { border-width: 3px; } 
+
+[data-theme="dark"] .elements-container {
+    background: var(--dark-card-bg);
+}
+
+[data-theme="dark"] .layout-box {
+    color: var(--normal-text);
+}
+[data-theme="dark"] .inside-text {
+    color: var(--normal-text);
+}
+
+

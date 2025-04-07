@@ -10,157 +10,193 @@
     font-size: 1.5rem;
 }
 
-/* Basic Table Style */
-.basic-table {
+/* Tables Showcase Styles */
+.table-section {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    overflow-x: auto;
+}
+
+.table-section:hover {
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-2px);
+}
+
+.table-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px var(--shadow-color);
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 2rem;
-    box-shadow: var(--box-shadow);
-}
-
-.basic-table th, .basic-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.basic-table th {
-    background: var(--primary-color);
-    color: white;
-}
-
-.basic-table tr:hover {
-    background: #f5f5f5;
-}
-
-/* Striped Table Style */
-.striped-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2rem;
-    box-shadow: var(--box-shadow);
-}
-
-.striped-table th, .striped-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.striped-table th {
-    background: var(--secondary-color);
-    color: white;
-}
-
-.striped-table tr:nth-child(even) {
-    background: #f8f9fa;
-}
-
-.striped-table tr:hover {
-    background: #e9ecef;
-}
-
-/* Modern Table Style */
-.modern-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-bottom: 2rem;
-    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+    background: var(--card-bg);
     border-radius: var(--border-radius);
     overflow: hidden;
+    box-shadow: var(--card-shadow);
 }
 
-.modern-table th, .modern-table td {
+th, td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+th {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background: rgba(74, 144, 226, 0.1);
+}
+
+/* Striped Table */
+.striped-table tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .striped-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Modern Table */
+.modern-table {
+    border: none;
 }
 
 .modern-table th {
-    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-    color: white;
-    font-weight: 500;
+    background: var(--secondary-color);
+}
+
+.modern-table td {
+    border-bottom: 1px solid var(--border-color);
 }
 
 .modern-table tr:last-child td {
     border-bottom: none;
 }
 
-.modern-table tr:hover {
-    background: #f8f9fa;
-    transform: scale(1.01);
-    transition: transform 0.2s ease;
-}
-
 /* Responsive Table */
 .responsive-table {
+
+    width:100%;
+    
+    overflow-x: auto;
+    /* white-space: nowrap; */
+    margin-bottom: auto;
+}
+.table-responsive {
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2rem;
-    box-shadow: var(--box-shadow);
-}
 
-.responsive-table th, .responsive-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
 }
-
-.responsive-table th {
-    background: var(--accent-color);
-    color: white;
-}
-
 /* Table with Caption */
-.caption-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2rem;
-    box-shadow: var(--box-shadow);
-}
-
-.caption-table caption {
-    caption-side: top;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-}
-
-.caption-table th, .caption-table td {
-    padding: 1rem;
+.table-caption {
+    caption-side: bottom;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
-.caption-table th {
-    background: var(--success-color);
-    color: white;
+/* Table Variations */
+.compact-table th,
+.compact-table td {
+    padding: 0.5rem;
 }
 
-/* Responsive Design for Tables */
-@media screen and (max-width: 600px) {
-    .responsive-table {
-        display: block;
-        overflow-x: auto;
+.large-table th,
+.large-table td {
+    padding: 1.5rem;
+}
+
+/* Table Borders */
+.bordered-table th,
+.bordered-table td {
+    border: 1px solid var(--border-color);
+}
+
+/* Table Hover Effects */
+.hover-table tr {
+    transition: var(--transition);
+}
+
+.hover-table tr:hover {
+    background: rgba(74, 144, 226, 0.1);
+    transform: scale(1.01);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table-section {
+        padding: 1.5rem;
     }
 
-    .table-container {
-        margin: 0 -1rem;
-        padding: 0 1rem;
+    .table-section h2 {
+        font-size: 1.5rem;
     }
 
-    .basic-table, .striped-table, .modern-table, .caption-table {
+    th, td {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-section {
+        padding: 1rem;
+    }
+
+    .table-section h2 {
+        font-size: 1.3rem;
+    }
+
+    th, td {
+        padding: 0.6rem;
         font-size: 0.9rem;
     }
+}
 
-    .basic-table th, .basic-table td,
-    .striped-table th, .striped-table td,
-    .modern-table th, .modern-table td,
-    .caption-table th, .caption-table td {
-        padding: 0.5rem;
-    }
+/* Table Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/* Table Cell States */
+.success-cell {
+    background: rgba(46, 204, 113, 0.1);
+    color: var(--success-color);
+}
+
+.warning-cell {
+    background: rgba(241, 196, 15, 0.1);
+    color: #f1c40f;
+}
+
+.error-cell {
+    background: rgba(231, 76, 60, 0.1);
+    color: var(--accent-color);
 }
 
 /* Animation for Tables */
@@ -184,4 +220,142 @@
 
 .basic-table tr:hover, .striped-table tr:hover, .modern-table tr:hover, .caption-table tr:hover {
     background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Table Container */
+.table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.table-title {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Table Sections */
+.table-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.table-section h2 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+/* Basic Table */
+.basic-table th {
+    background: var(--primary-color);
+}
+
+.basic-table td {
+    background: var(--bg-color);
+}
+
+/* Striped Table */
+.striped-table tr:nth-child(even) {
+    background: var(--striped-bg);
+}
+
+/* Hover Table */
+.hover-table tr:hover {
+    background: var(--hover-bg);
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .table-container {
+    background: var(--dark-card-bg);
+}
+
+[data-theme="dark"] .table-section {
+    background: var(--dark-bg-color);
+}
+
+[data-theme="dark"] .table-section h2 {
+    color: var(--dark-text-color);
+}
+
+[data-theme="dark"] th {
+    background: var(--dark-primary-color);
+}
+
+[data-theme="dark"] td {
+    color: var(--dark-text-color);
+    border-bottom-color: var(--dark-border-color);
+}
+
+[data-theme="dark"] .basic-table td {
+    background: var(--dark-bg-color);
+}
+
+[data-theme="dark"] .striped-table tr:nth-child(even) {
+    background: var(--dark-striped-bg);
+}
+
+[data-theme="dark"] .hover-table tr:hover {
+    background: var(--dark-hover-bg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table-container {
+        padding: 1.5rem;
+    }
+
+    .table-title {
+        font-size: 1.8rem;
+    }
+
+    .table-section {
+        padding: 1rem;
+    }
+
+    th, td {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-container {
+        padding: 1rem;
+    }
+
+    .table-title {
+        font-size: 1.5rem;
+    }
+
+    th, td {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
 } 
