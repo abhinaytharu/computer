@@ -26,32 +26,30 @@ It showcases HTML elements with simple styling examples and includes **JavaScrip
 
 ## 📂 Project Structure
 
--HTML-Elements-Showcase/
--├── index.html # Home page showcasing all elements
--│
--├── static/
--│ ├── Sources/
--│ │ └── logo.webp # Project logo
--│ │
--│ ├── css/
--│ │ ├── div-span.css # Styles for div & span examples
--│ │ ├── forms.css # Styles for form examples
--│ │ ├── images.css # Styles for image examples
--│ │ ├── main.css # Global styles (including dark mode)
--│ │ └── tables.css # Styles for table examples
--│ │
--│ └── js/
--│ └── main.js # Dark mode & smooth scrolling logic
--│
--└── templates/elements/
--├── div-span.html # Demo page for div & span elements
--├── forms.html # Demo page for forms
--├── images.html # Demo page for images
--└── tables.html # Demo page for tables
-
-
----
-
+```plaintext
+HTML-Elements-Showcase/
+├── index.html                     # Home page showcasing all elements
+│
+├── static/
+│   ├── Sources/
+│   │   └── logo.webp              # Project logo
+│   │
+│   ├── css/
+│   │   ├── div-span.css           # Styles for div & span examples
+│   │   ├── forms.css              # Styles for form examples
+│   │   ├── images.css             # Styles for image examples
+│   │   ├── main.css               # Global styles (including dark mode)
+│   │   └── tables.css             # Styles for table examples
+│   │
+│   └── js/
+│       └── main.js                # Dark mode & smooth scrolling logic
+│
+└── templates/elements/
+    ├── div-span.html              # Demo page for div & span elements
+    ├── forms.html                 # Demo page for forms
+    ├── images.html                # Demo page for images
+    └── tables.html                # Demo page for tables
+```
 ## 🚀 Getting Started
 
 1. **Clone or Download the Repository**  
